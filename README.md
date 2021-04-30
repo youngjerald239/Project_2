@@ -13,25 +13,19 @@ Free Games app is easy and simple to use. Just search for the free games by genr
 
 ## API
 
-https://www.freetogame.com/api/games
-
-Free-to-play games database powered by FreeToGame.com! FreeToGame is a gaming platform that provides access to the best free-to-play games and MMO Games while rewarding gamers with perks.
-
-
 ```
-{data: {const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://free-to-play-games-database.p.rapidapi.com/api/game?id=452",
+{data: {fetch("https://free-to-play-games-database.p.rapidapi.com/api/game?id=452", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-key": "238791b430mshf27f36440d2bc07p120426jsnb81344321f54",
 		"x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com"
 	}
-};
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
+	return ("id":452
+"title":"Call Of Duty: Warzone"
+"thumbnail":"https://www.freetogame.com/g/452/thumbnail.jpg"
+"status":"Live"
+"short_description":"A standalone free-to-play battle royale and modes accessible via Call of Duty: Modern Warfare.")
 });} }
 ```
 
