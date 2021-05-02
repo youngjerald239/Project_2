@@ -1,6 +1,6 @@
 # Project Overview
 
-I will be creating an app that finds and lists Free-to-Play games. The list will be comprised of different genres, sorted, and offer information about the free games.
+I will be creating an app that finds and lists games. The list will be comprised of different genres, sorted, and offer information about the individual games.
 
 ## Project Links
 
@@ -14,19 +14,15 @@ Free Games app is easy and simple to use. Just search for the free games by genr
 ## API
 
 ```
-{data: {fetch("https://free-to-play-games-database.p.rapidapi.com/api/game?id=452", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "238791b430mshf27f36440d2bc07p120426jsnb81344321f54",
-		"x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com"
-	}
+{data: {"https://api.rawg.io/api/games?dates=2019-09-01%2C2019-09-30&key=c23a0873534643e2b3b58cea382e6f9a&page=2&platforms=18%2C1%2C7", {
+	
+"count": 0,
+"next": "http://example.com",
+"previous": "http://example.com",
+"results": [{}]
 
-	return ("id":452
-"title":"Call Of Duty: Warzone"
-"thumbnail":"https://www.freetogame.com/g/452/thumbnail.jpg"
-"status":"Live"
-"short_description":"A standalone free-to-play battle royale and modes accessible via Call of Duty: Modern Warfare.")
-});} }
+}
+}
 ```
 
 

@@ -10,8 +10,8 @@ function Header (props){
     <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="/">GameLounge</Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="/">Home</Nav.Link>
-      <Nav.Link href="./mygames">My Games</Nav.Link>
+      <Link to="/">Home</Link>
+      <Link to="./mygames">My Games</Link>
     </Nav>
     <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />

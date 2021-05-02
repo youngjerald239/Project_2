@@ -9,30 +9,20 @@ function App() {
 //My games page with share the game list data with home
   const [games, setGames] = useState([])
 
-  const [freegamelist, setFreeGameList] = useState([])
+  const [gamelist, setGameList] = useState([])
 
-  const getFreeGameList = async () => {
-    const response = await fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-key": "238791b430mshf27f36440d2bc07p120426jsnb81344321f54",
-        "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com"
-      }
-    })
+  const getGameList = async () => {
+    const response = await fetch("https://api.rawg.io/api/games?key=c23a0873534643e2b3b58cea382e6f9a&dates&page_size=80&platforms=18,1,7,2,3,4&ordering=name")
     
-    .catch(err => {
-      console.error(err);
-    });
-
     const data = await response.json()
 
-    setFreeGameList(data)
+    setGameList(data.results)
 
     // console.log(getFreeGameList)
 
   }
 
-  useEffect(() => {getFreeGameList()}, [])
+  useEffect(() => {getGameList()}, [])
 
   return (
     <div className="App">
@@ -40,7 +30,7 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <Home FreeGameList={freegamelist}/>
+            <Home gamelist={gamelist}/>
           </Route>
           <Route path="/MyGames">
             <MyGames/>
