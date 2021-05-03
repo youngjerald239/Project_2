@@ -17,13 +17,14 @@ function Home (props) {
         const data = await response.json()
         setSelected({
             name: data.name,
-            platform: data.platforms[0].name
+            platforms: data.platforms[0].name,
+            img: data.results.background_image
         })
     }
 
     return <div style={divStyle}>
-        <GameList gamelist={props.gamelist}/>
-        <OneGame/>
+        <GameList gamelist={props.gamelist} selectOneGame={selectOneGame}/>
+        <OneGame selected={selected}/>
     </div>
 }
 
