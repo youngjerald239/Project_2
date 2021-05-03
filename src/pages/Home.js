@@ -13,12 +13,12 @@ function Home (props) {
     const [selected, setSelected] = useState(null)
 
     const selectOneGame = async (onegame) => {
-        const response = await fetch(onegame.url)
+        const response = await fetch(GameList.url)
         const data = await response.json()
         setSelected({
             name: data.name,
             platforms: data.platforms[0].name,
-            img: data.results.background_image
+            img: data.results.short_image
         })
     }
 

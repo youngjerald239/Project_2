@@ -1,7 +1,9 @@
 function GameList (props){
     return <div>
         {props.gamelist.map((game, index) => {
-            return <h1 onClick={() => props.selectOneGame(game.name)}>{game.name}</h1>
+            return <div>
+             <button onClick={() => props.selectOneGame(game.name.onegame)}>{game.name}</button>
+             </div>
         })}
     </div>
 }
