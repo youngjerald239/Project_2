@@ -1,10 +1,10 @@
-function OneGame (props){
+function GameDetail (props){
     return <div>
         <h1>{props.selected}</h1>
-        <img src={props.selected} alt={props.selected}/> 
-        <h2> Platforms {props.selected}</h2>
-        { <button onClick={() => props.handleClick(props.slected)}>{props.label}</button>}
+        <img src={props.GameDetail} alt={props.selected}/> 
+        <h2> Game Details {props.selected}</h2>
+        { <h1 onClick={() => props.handleClick(props.slected.game)}>{props.label}</h1>}
     </div>
 }
 
-export default OneGame
+export default GameDetail

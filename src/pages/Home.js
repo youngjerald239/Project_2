@@ -7,19 +7,20 @@ function Home (props) {
     const divStyle = {
         display:"flex",
         justifyContent: "space-around",
-        backgroundColor:"black"
+        backgroundColor:"black",
+        
         
     };
 
     const [selected, setSelected] = useState(null)
 
-    const selectOneGame = async (onegame) => {
-        const response = await fetch(GameList.stores)
+    const selectOneGame = async (selectOneGame) => {
+        const response = await fetch(GameList.results)
         const data = await response.json()
         setSelected({
-            name: data.name,
+            name: data.results.name,
             platforms: data.platforms[0].name,
-            img: data.results.background_image
+            src: data.results.background_image
         })
     }
 
