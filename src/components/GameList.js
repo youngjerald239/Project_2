@@ -9,7 +9,7 @@ function GameList (props){
                             <Card.Img src={game.background_image} />
                             <Card.ImgOverlay>
                             <Card.Body>
-                        <h1 onClick={() => props.selectOneGame(game.name)}>{game.name}</h1>
+                        <h1 onClick={() => props.selectOneGame(game.results)}>{game.name}</h1>
                         </Card.Body>
                         </Card.ImgOverlay>
                         </Card>

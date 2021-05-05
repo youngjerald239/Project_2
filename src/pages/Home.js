@@ -18,9 +18,11 @@ function Home (props) {
         const response = await fetch(GameList.results)
         const data = await response.json()
         setSelected({
+            id:data.id,
             name: data.results.name,
-            platforms: data.platforms[0].name,
-            src: data.results.background_image
+            platforms: data.results.platforms[0].platform.name,
+            src: data.results.background_image,
+            ratings: data.results.ratings
         })
     }
 
