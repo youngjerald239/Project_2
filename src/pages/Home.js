@@ -29,6 +29,7 @@ function Home (props) {
     return <div style={divStyle}>
         <GameList gamelist={props.gamelist} selectOneGame={selectOneGame}/>
         <OneGame selected={selected}/>
+        
     </div>
 }
 

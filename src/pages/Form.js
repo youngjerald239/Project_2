@@ -1,22 +1,24 @@
 import React from "react"
 import ReactDOM from 'react-dom'
+import Form from 'react-bootstrap/Form'
 
-function Form (props){
-    return class MyForm extends React.Component {
+function Forms (props){
+    return class Form extends React.Component {
         constructor(props) {
           super(props);
           this.state = {
             username: '',
+            password:'',
             age: null,
             errormessage: ''
           };
         }
         myChangeHandler = (event) => {
-          let nam = event.target.name;
-          let val = event.target.value;
+          const nam = event.target.name;
+          const val = event.target.value;
           let err = '';
           if (nam === "age") {
-            if (val !="" && !Number(val)) {
+            if (val !=="" && !Number(val)) {
               err = <strong>Your age must be a number</strong>;
             }
           }
@@ -27,11 +29,17 @@ function Form (props){
           return (
               <div>
             <form>
-            <h1>Hello {this.state.username} {this.state.age}</h1>
+            <h1>Enter information to Sign in {this.state.username} {this.state.age}</h1>
             <p>Enter your name:</p>
             <input
               type='text'
               name='username'
+              onChange={this.myChangeHandler}
+            />
+            <p>Enter your Password:</p>
+            <input
+              type='text'
+              name='Password'
               onChange={this.myChangeHandler}
             />
             <p>Enter your age:</p>
@@ -47,6 +55,6 @@ function Form (props){
         }
       }
       
-       ReactDOM.render(<MyForm />, document.getElementById('root'));
+       ReactDOM.render(<Form />, document.getElementById('root'));
     }
-export default Form
+export default Forms
