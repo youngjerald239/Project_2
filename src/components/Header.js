@@ -8,7 +8,7 @@ import {Link} from "react-router-dom"
 function Header (props){
     return ( 
     <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="#home"><img
+      <Navbar.Brand href="/"><img
         src="https://img.freepik.com/free-vector/console-ninja-gaming-logo-design_100735-52.jpg?size=626&ext=jpg"
         width="40"
         height="40"
@@ -17,9 +17,9 @@ function Header (props){
       /></Navbar.Brand>
     <Navbar.Brand href="/">Game Lounge</Navbar.Brand>
     <Nav className="mr-auto">
-      <Link to="/">Home</Link>
-      <Link to="./mygames">My Games</Link>
-      <Link to="./Form">Sign-Up</Link>
+      <Nav.Link href="/">Home</Nav.Link>
+      <Nav.Link href="./MyGames">My Games</Nav.Link>
+      <Nav.Link href="./Form">Sign-Up</Nav.Link>
     </Nav>
     <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
