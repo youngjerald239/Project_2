@@ -7,7 +7,7 @@ function GameList (props){
         {props.gamelist.map((game, index) => {
             return <div>
                 <CardDeck>
-                      <Card style={{ width: '30rem',height:'20rem', justifyContent:'space-between'}}>
+                      <Card style={{ width: '30rem',height:'20rem', justifyContent:'space-between', display: 'grid'}}>
                             <Card.Img src={game.background_image} />
                             <Card.ImgOverlay>
                             <Card.Body>
@@ -20,7 +20,7 @@ function GameList (props){
                         </Card.Footer>
                         </Card>
                         <Card.Text>
-                                This is Where my game detail info would load, If I could find it! "Dinkleberg!!"
+                                
                         </Card.Text>
                         </CardDeck>
                     </div>

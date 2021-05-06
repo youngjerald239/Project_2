@@ -3,7 +3,7 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Home from "./pages/Home"
 import MyGames from "./pages/MyGames"
-import Form from "./pages/Form"
+import Forms from "./pages/Form"
 import {useState, useEffect} from "react"
 import './App.css';
 
@@ -36,11 +36,11 @@ function App() {
           <Route exact path="/">
             <Home gamelist={gamelist}/>
           </Route>
-          <Route>
-            <Form path="/Form"/>
-          </Route>
           <Route path="/MyGames">
             <MyGames/>
+          </Route>
+          <Route path="/Form">
+            <Forms/>
           </Route>
           </Switch>
       </main>

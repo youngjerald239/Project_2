@@ -6,7 +6,8 @@ import {useState} from "react"
 function Home (props) {
     const divStyle = {
         display:"flex",
-        justifyContent: "space-around",
+        flexDirection: "column",
+        justifyContent: "space-between",
         backgroundColor:"black",
         
         
@@ -21,7 +22,6 @@ function Home (props) {
             id:data.id,
             name: data.results.name,
             platforms: data.results.platforms[0].platform.name,
-            src: data.results.background_image,
             ratings: data.results.ratings
         })
     }
