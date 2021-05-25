@@ -5,7 +5,7 @@ I will be creating an app that finds and lists games. The list will be comprised
 ## Project Links
 - [https://github.com/youngjerald239/Project_2.git]()
 
-- https://app.netlify.com/sites/epic-blackwell-90b00a/deploys
+- https://epic-blackwell-90b00a.netlify.app/
 
 ## Project Description
 
