@@ -5,11 +5,11 @@ I will be creating an app that finds and lists games. The list will be comprised
 ## Project Links
 
 - [https://github.com/youngjerald239/Project_2.git]()
-- [https://epic-blackwell-90b00a.netlify.app]()
+- [https://app.netlify.com/sites/epic-blackwell-90b00a/deploys]()
 
 ## Project Description
 
-Free Games app is easy and simple to use. Just search for the free games by genre, type, platform, and sorted. The app finds all free games, for all gaming systems.
+Game Lounge is easy and simple to use. Just search for the games by genre, type, platform, and sorted. The app finds all games, for all gaming systems.
 
 ## API
 
